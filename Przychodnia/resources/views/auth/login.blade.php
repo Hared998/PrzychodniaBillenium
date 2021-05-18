@@ -7,8 +7,8 @@
             <h2>Logowanie</h2>
             <form action="#">
                 <div class="txt-field">
-                    <label for="login">Login</label>
-                    <input type="text" name="login">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
                 </div>
                 <div class="txt-field">
                     <label for="password">Hasło</label>
