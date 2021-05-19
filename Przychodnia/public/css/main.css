@@ -115,3 +115,44 @@
   color: #E01025;
   border: 1px solid #E01025;
 }
+
+.wyborlekarza-content {
+  margin-top: 50px;
+}
+.wyborlekarza-content .wyborlekarza-title {
+  font-size: 50px;
+  color: #c0bdbd;
+  font-weight: 500;
+}
+.wyborlekarza-content .wyborlekarza-subtitle {
+  font-size: 40px;
+  color: #c0bdbd;
+  font-weight: 400;
+  margin-bottom: 100px;
+}
+.wyborlekarza-content .wyborlekarza-board {
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+.wyborlekarza-content .wyborlekarza-board a {
+  text-decoration: none;
+  color: black;
+}
+.wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card {
+  width: 350px;
+  height: 350px;
+  margin: 20px;
+  padding: 90px 30px 30px 30px;
+  box-shadow: 0px 0px 33px -2px rgba(0, 0, 0, 0.3);
+}
+.wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card hr {
+  margin-top: 70px;
+}
+.wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card h4 {
+  color: #fd7e14;
+}
