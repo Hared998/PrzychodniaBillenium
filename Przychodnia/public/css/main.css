@@ -111,6 +111,7 @@
   padding: 15px 95px;
   margin-top: 60px;
   margin-right: 75px;
+  margin-left: 380px;
   background: none;
   color: #E01025;
   border: 1px solid #E01025;
@@ -153,8 +154,6 @@
 .wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card hr {
   margin-top: 70px;
 }
-
 .wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card h4 {
   color: #fd7e14;
 }
-

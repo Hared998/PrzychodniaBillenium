@@ -35,10 +35,10 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
 
-                <a class="nav-link" href="#">Strona główna <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Strona główna <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Umów wizytę</a>
+                <a class="nav-link" href="{{ route('layouts.wyborlekarza') }}">Wybór lekarza</a>
             </li>
         </ul>
         <!-- Right Side Of Navbar -->
@@ -76,12 +76,6 @@
                             </li>
                         @endguest
                     </ul>
-
-                <a class="nav-link" href="/">Strona główna <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('layouts.wyborlekarza') }}">Wybór lekarza</a>
-            </li>
         </ul>
         <form class="form-inline my-2 my-md-0"></form>
     </div>
