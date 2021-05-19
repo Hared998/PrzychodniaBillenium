@@ -43,7 +43,7 @@
                     
                             <div class="button-section">
                                 <div class="left">
-                                    <a href="#">Zarejestruj się</a>
+                                    <a href="/register">Zarejestruj się</a>
                             </div>
                                 <div class="right">
                                     <button type="submit">{{ __('Zaloguj się') }}</button>
