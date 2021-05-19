@@ -1,119 +1,159 @@
 .login {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .login .login-content h2 {
-    text-align: center;
-  }
-  .login .login-content .login-board {
-    width: 600px;
-    height: 680px;
-    padding: 30px;
-    box-shadow: 0px 0px 33px -2px rgba(0, 0, 0, 0.3);
-  }
-  .login .login-content .login-board h2 {
-    font-size: 40px;
-    color: #E1E1E1;
-    font-weight: 500;
-    margin-bottom: 100px;
-  }
-  .login .login-content .login-board form {
-    padding: 0 30px;
-  }
-  .login .login-content .login-board form .txt-field {
-    border-bottom: 1px solid #000;
-    margin-top: 40px;
-  }
-  .login .login-content .login-board form .txt-field input {
-    width: 100%;
-    height: 40px;
-    font-size: 21px;
-    border: none;
-    background: none;
-    outline: none;
-    color: #b3b3b3;
-  }
-  .login .login-content .login-board form .txt-field label {
-    font-size: 25px;
-  }
-  .login .login-content .login-board form .button-section {
-    margin-top: 150px;
-  }
-  .login .login-content .login-board form .button-section .left {
-    float: left;
-    text-align: start;
-  }
-  .login .login-content .login-board form .button-section .left a {
-    color: #E01025;
-    font-size: 21px;
-    vertical-align: middle;
-    line-height: 66px;
-  }
-  .login .login-content .login-board form .button-section .right {
-    text-align: end;
-  }
-  .login .login-content .login-board form .button-section .right button {
-    font-size: 21px;
-    padding: 20px 25px;
-    background: none;
-    color: #FC9219;
-    border: 1px solid #FC9219;
-  }
-  
-  .register {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .register .register-content .register-board {
-    width: 1300px;
-    height: 700px;
-    padding: 30px;
-    box-shadow: 0px 0px 33px -2px rgba(0, 0, 0, 0.3);
-  }
-  .register .register-content .register-board h2 {
-    text-align: center;
-    font-size: 40px;
-    color: #E1E1E1;
-    font-weight: 500;
-    margin-bottom: 100px;
-  }
-  .register .register-content .register-board form {
-    padding: 0 30px;
-  }
-  .register .register-content .register-board form .row {
-    margin-left: 20px;
-  }
-  .register .register-content .register-board form .txt-field {
-    border-bottom: 1px solid #000;
-    margin-top: 40px;
-    width: 315px;
-    margin-right: 70px;
-  }
-  .register .register-content .register-board form .txt-field input {
-    width: 100%;
-    height: 40px;
-    font-size: 21px;
-    border: none;
-    background: none;
-    outline: none;
-    color: #b3b3b3;
-  }
-  .register .register-content .register-board form .txt-field label {
-    font-size: 25px;
-  }
-  .register .register-content .register-board form .right {
-    text-align: end;
-  }
-  .register .register-content .register-board form .right button {
-    font-size: 21px;
-    padding: 15px 95px;
-    margin-top: 60px;
-    margin-left: 380px;
-    margin-right: 75px;
-    background: none;
-    color: #E01025;
-    border: 1px solid #E01025;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.login .login-content h2 {
+  text-align: center;
+}
+.login .login-content .login-board {
+  width: 600px;
+  height: 680px;
+  padding: 30px;
+  box-shadow: 0px 0px 33px -2px rgba(0, 0, 0, 0.3);
+}
+.login .login-content .login-board h2 {
+  font-size: 40px;
+  color: #E1E1E1;
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+.login .login-content .login-board form {
+  padding: 0 30px;
+}
+.login .login-content .login-board form .txt-field {
+  border-bottom: 1px solid #000;
+  margin-top: 40px;
+}
+.login .login-content .login-board form .txt-field input {
+  width: 100%;
+  height: 40px;
+  font-size: 21px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #b3b3b3;
+}
+.login .login-content .login-board form .txt-field label {
+  font-size: 25px;
+}
+.login .login-content .login-board form .button-section {
+  margin-top: 150px;
+}
+.login .login-content .login-board form .button-section .left {
+  float: left;
+  text-align: start;
+}
+.login .login-content .login-board form .button-section .left a {
+  color: #E01025;
+  font-size: 21px;
+  vertical-align: middle;
+  line-height: 66px;
+}
+.login .login-content .login-board form .button-section .right {
+  text-align: end;
+}
+.login .login-content .login-board form .button-section .right button {
+  font-size: 21px;
+  padding: 20px 25px;
+  background: none;
+  color: #FC9219;
+  border: 1px solid #FC9219;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.register .register-content .register-board {
+  width: 1300px;
+  height: 700px;
+  padding: 30px;
+  box-shadow: 0px 0px 33px -2px rgba(0, 0, 0, 0.3);
+}
+.register .register-content .register-board h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #E1E1E1;
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+.register .register-content .register-board form {
+  padding: 0 30px;
+}
+.register .register-content .register-board form .row {
+  margin-left: 20px;
+}
+.register .register-content .register-board form .txt-field {
+  border-bottom: 1px solid #000;
+  margin-top: 40px;
+  width: 315px;
+  margin-right: 70px;
+}
+.register .register-content .register-board form .txt-field input {
+  width: 100%;
+  height: 40px;
+  font-size: 21px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #b3b3b3;
+}
+.register .register-content .register-board form .txt-field label {
+  font-size: 25px;
+}
+.register .register-content .register-board form .right {
+  text-align: end;
+}
+.register .register-content .register-board form .right button {
+  font-size: 21px;
+  padding: 15px 95px;
+  margin-top: 60px;
+  margin-right: 75px;
+  background: none;
+  color: #E01025;
+  border: 1px solid #E01025;
+}
+
+.wyborlekarza-content {
+  margin-top: 50px;
+}
+.wyborlekarza-content .wyborlekarza-title {
+  font-size: 50px;
+  color: #c0bdbd;
+  font-weight: 500;
+}
+.wyborlekarza-content .wyborlekarza-subtitle {
+  font-size: 40px;
+  color: #c0bdbd;
+  font-weight: 400;
+  margin-bottom: 100px;
+}
+.wyborlekarza-content .wyborlekarza-board {
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+.wyborlekarza-content .wyborlekarza-board a {
+  text-decoration: none;
+  color: black;
+}
+.wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card {
+  width: 350px;
+  height: 350px;
+  margin: 20px;
+  padding: 90px 30px 30px 30px;
+  box-shadow: 0px 0px 33px -2px rgba(0, 0, 0, 0.3);
+}
+.wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card hr {
+  margin-top: 70px;
+}
+.wyborlekarza-content .wyborlekarza-board a .wyborlekarza-card h4 {
+  color: #fd7e14;
+}
+

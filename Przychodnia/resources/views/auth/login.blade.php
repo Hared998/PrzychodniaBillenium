@@ -2,12 +2,11 @@
 
 @section('content')
 
-
 <section class="login">
     <div class="login-content">
         <div class="login-board">
             <h2>Logowanie</h2>
-            
+          
                     
                 <form method="POST" action="{{ route('login') }}">
                             @csrf
@@ -54,10 +53,4 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
 @endsection
