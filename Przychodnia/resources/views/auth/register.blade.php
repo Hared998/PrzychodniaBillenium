@@ -63,7 +63,7 @@
                             <label for="imie">{{ __('Imię') }}</label>
 
                             
-                                <input id="imie" type="text" name="imie" required autocomplete="imie" autofocus>
+                                <input id="imie" type="text" name="imie" class="form-control" required autocomplete="imie" autofocus>
 
                                 @error('imie')
                                     <span class="invalid-feedback" role="alert">
@@ -77,7 +77,7 @@
                             <label for="nazwisko">{{ __('Nazwisko') }}</label>
 
                             
-                                <input id="nazwisko" type="text"  name="nazwisko" required autocomplete="nazwisko" autofocus>
+                                <input id="nazwisko" type="text"  name="nazwisko" class="form-control" required autocomplete="nazwisko" autofocus>
 
                                 @error('nazwisko')
                                     <span class="invalid-feedback" role="alert">
@@ -91,7 +91,7 @@
                             <label for="numer">{{ __('Numer tel') }}</label>
 
                             
-                                <input id="numer" type="text"  name="numer" required autocomplete="numer" autofocus>
+                                <input id="numer" type="text"  name="numer" class="form-control" required autocomplete="numer" autofocus>
 
                                 @error('numer')
                                     <span class="invalid-feedback" role="alert">
@@ -102,7 +102,17 @@
                 </div>
 
 
+                <div class="txt-field">
+                            <label for="wiek">{{ __('Wiek') }}</label>                            
+                                <input id="wiek" type="text"  name="wiek" class="form-control" required autocomplete="wiek" autofocus>
+                                @error('wiek')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror                          
                 </div>
+
+                
                 <div class="right">
                     <button type="submit">{{ __('Zarejestruj się') }}</button>
                 </div>
