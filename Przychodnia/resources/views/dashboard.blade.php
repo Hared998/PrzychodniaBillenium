@@ -12,7 +12,8 @@
                                 <h6 class="mb-0">Imie i nazwisko</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                Jan Kowalski
+                                
+                                {{ Auth::user()->imie }} {{ Auth::user()->nazwisko }}
                             </div>
                         </div>
                         <hr>
@@ -21,7 +22,7 @@
                                 <h6 class="mb-0">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                test@gmail.al
+                                {{ Auth::user()->email }}
                             </div>
                         </div>
                         <hr>
@@ -30,16 +31,16 @@
                                 <h6 class="mb-0">Telefon</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                123-456-789
+                                {{ Auth::user()->numer }}
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">PESEL</h6>
+                                <h6 class="mb-0">Wiek</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                999999999
+                                {{ Auth::user()->wiek }}
                             </div>
                         </div>
                         <br>
@@ -50,28 +51,40 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <h6 class="mb-0">Najblizsze wizyta</h6>
+                            </div>
+                           
+                            <div class="col-sm-6 text-secondary">
+                                @if($datavisit != null)
+                                    {{$datavisit->Date}}
+                                @else
+                                
+                                    Brak zaplanowanych wizyt
+                                    @endif
                             </div>
                         </div>
                         <hr>
+                        @if($datavisit != null)
                         <div class="row">
-                            <div class="col-sm-2 text-secondary">
-                                2021-05-13
+                            <div class="col-sm-4">
+                                Lekarz: 
                             </div>
                             <div class="col-sm-4">
-                                12:00
+                            {{$doctor[0]->firstName}} {{$doctor[0]->lastName}}
                             </div>
                         </div>
                         <br>
                         <div class="row">
-                            <div class="col-sm-2">
-                                Lekarz:
-                            </div>
                             <div class="col-sm-4">
-                                Adrian Kowalski
+                                Specjalizacja:
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                {{$doctor[0]->Specialization}} 
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -80,34 +93,26 @@
             <div class="col-lg-10 mx-auto pt-4">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ostatnie zalecenia</h4>
+                        <h4 class="card-title">Ostatnie recepty</h4>
                         <div class="list-group">
+                            @if(count($datarecipe) > 0)
+                            @foreach($datarecipe as $i)
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">Lekarz {{$i->firstName}} {{$i->lastName}}</h5>
+                                    <small>{{$i->Date}}</small>
+                                </div>
+                                <p class="mb-1">Zalecenia: {{$i->recommendations}}</p>
+                                <p class="mb-1">Lekarstwa: {{$i->Medicines}}</p>
+                            </a>
+                            @endforeach
+                            @else
                             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Lekarz Adrian Kowalski</h5>
-                                    <small>2 dni temu</small>
+                                    <h5 class="mb-1">Nie dostałeś jeszcze żadnej recepty</h5>
                                 </div>
-                                <p class="mb-1">Zalecenie 1</p>
-                                <p class="mb-1">Zalecenie 2</p>
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Lekarz Adrian Kowalski</h5>
-                                    <small class="text-muted">30 dni temu</small>
-                                </div>
-                                <p class="mb-1"> Zalecenie 1</p>
-                                <p class="mb-1"> Zalecenie 2</p>
-                                <p class="mb-1"> Zalecenie 3</p>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Lekarz dziwny</h5>
-                                    <small class="text-muted">rok temu</small>
-                                </div>
-                                <p class="mb-1"> Zalecenie 1</p>
-                                <p class="mb-1"> Zalecenie 2</p>
-                                <p class="mb-1"> Zalecenie 3</p>
-                            </a>
+                            @endif
                         </div>
                     </div>
                 </div>

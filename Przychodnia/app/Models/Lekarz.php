@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Lekarz extends Model
 {
     use HasFactory;
+    public function index()
+    {
+        $table = 'lekarzs';
+    }
 }
