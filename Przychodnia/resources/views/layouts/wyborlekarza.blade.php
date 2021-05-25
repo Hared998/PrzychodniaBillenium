@@ -8,7 +8,7 @@
 
     <div class="wyborlekarza-board d-flex justify-content-center">
         @foreach ($lekarze as $lekarz)
-            <a href="#">
+            <a href="{{ route('layouts.kalendarzlekarza', ['id' => $lekarz->id]) }}">
                 <div class="wyborlekarza-card">
                     <h3>{{$lekarz->firstName}}</h3>
                     <h3>{{$lekarz->lastName}}</h3>

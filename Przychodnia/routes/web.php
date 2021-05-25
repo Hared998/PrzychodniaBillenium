@@ -23,5 +23,7 @@ Auth::routes();
 
 
 Route::get('/wybor-lekarza', [WyborlekarzaController::class, 'index'])->name('layouts.wyborlekarza');
-Route::get('/home', [dashboard::class, 'index'])->name('dashboard');
 
+Route::get('/wybor-lekarza/{id}', [WyborlekarzaController::class, 'kalendarz'])->name('layouts.kalendarzlekarza');
+
+Route::get('/home', [dashboard::class, 'index'])->name('dashboard');
