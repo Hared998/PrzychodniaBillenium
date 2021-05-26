@@ -50,14 +50,7 @@ function init_calendar(date) {
         else {
             var curr_date = $("<td class='table-date'>"+day+"</td>");
             var events = check_events(day, month+1, year);
-            if(today===day && $(".active-date").length===0) {
-                curr_date.addClass("active-date");
-                show_events(events, months[month], day);
-            }
-            // If this date has any events, style it with .event-date
-            if(events.length!==0) {
-                curr_date.addClass("event-date");
-            }
+
             // Set onClick handler for clicking a date
             curr_date.click({events: events, month: months[month], day:day}, date_click);
             row.append(curr_date);

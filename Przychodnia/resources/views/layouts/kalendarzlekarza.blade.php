@@ -74,6 +74,7 @@
                                 <label for="objawy">Objawy</label>
                                 <input type="text" name="objawy">
                             </div>
+                            <input id="data-kalendarz" type="text" name="data" style="display: none;">
                             <button type="submit">Zapisz się</button>
                         </form>
 				    </div>
@@ -85,4 +86,56 @@
 <script src="{{ asset('js/jquery.min.js')}}"></script>
 <script src="{{ asset('js/popper.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        $(document).on('click', '.table-date', function(){
+            var dzien = $(this).text();
+            var miesiac = $('.month.active-month').text();
+            var rok = $('.year').text();
+            if(miesiac === "Sty") {
+                miesiac = '01';
+            }
+            else if(miesiac === "Sty") {
+                miesiac = '01';
+            }
+            else if(miesiac === "Lut") {
+                miesiac = '02';
+            }
+            else if(miesiac === "Mar") {
+                miesiac = '03';
+            }
+            else if(miesiac === "Kwi") {
+                miesiac = '04';
+            }
+            else if(miesiac === "Maj") {
+                miesiac = '05';
+            }
+            else if(miesiac === "Cze") {
+                miesiac = '06';
+            }
+            else if(miesiac === "Lip") {
+                miesiac = '07';
+            }
+            else if(miesiac === "Sie") {
+                miesiac = '08';
+            }
+            else if(miesiac === "Wrz") {
+                miesiac = '09';
+            }
+            else if(miesiac === "Paź") {
+                miesiac = '10';
+            }
+            else if(miesiac === "Lis") {
+                miesiac = '11';
+            }
+            else if(miesiac === "Gru") {
+                miesiac = '12';
+            }
+
+            var data = rok+"-"+miesiac+"-"+dzien;
+
+            $("#data-kalendarz").val(data);
+        });
+    });
+</script>
 @endsection
