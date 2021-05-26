@@ -1,0 +1,96 @@
+.kalendarzlekarza-content {
+    .kalendarzlekarza-info {
+        padding-top: 150px;
+        border-right: 2px solid #cacaca;
+    }
+    .kalendarzlekarza-calendar {
+        .event-container {
+            #wizyta {
+
+                label {
+                    margin-top: 30px;
+                    font-size: 22px;
+                    color: rgb(131, 85, 1);
+                    font-weight: bold;
+                }
+                select {
+                    // A reset of styles, including removing the default dropdown arrow
+                    appearance: none;
+                    // Additional resets for further consistency
+                    background-color: transparent;
+                    border: none;
+                    padding: 0 1em 0 0;
+                    margin: 0;
+                    width: 100%;
+                    font-family: inherit;
+                    font-size: inherit;
+                    cursor: inherit;
+                    line-height: inherit;
+
+                    width: 75%;
+                    margin: auto;
+                    border-bottom: 1px solid rgb(131, 85, 1);
+                    color: rgb(131, 85, 1);
+                    font-size: 21px;
+                    text-align-last:center;
+                }
+                .txt-field {
+                    border-bottom: 1px solid rgb(131, 85, 1);
+                    width: 75%;
+                    margin-top: 20px;
+                    margin: auto;
+                    input{
+                        width: 100%;
+                        height: 30px;
+                        font-size: 21px;
+                        border: none;
+                        background: none;
+                        outline: none;
+                        color: rgb(131, 85, 1);
+                    }
+                }
+                button {
+                    position: relative;
+                    margin-top: 70px;
+                    font-size: 21px;
+                    padding: 10px 15px;
+                    background: none;
+                    color: rgb(131, 85, 1);
+                    font-weight: bold;
+                    border: none;
+                    transition: 0.5s;
+                }
+                button::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    border-top: 3px solid rgb(131, 85, 1);
+                    border-left: 3px solid rgb(131, 85, 1);
+                    transition: 0.5s;
+                }
+                button::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 15px;
+                    height: 15px;
+                    border-right: 3px solid rgb(131, 85, 1);
+                    border-bottom: 3px solid rgb(131, 85, 1);
+                    transition: 0.5s;
+                }
+                button:hover::before {
+                    width: 100%;
+                    height: 100%;
+                }
+                button:hover::after {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

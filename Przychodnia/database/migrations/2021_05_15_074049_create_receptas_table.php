@@ -15,8 +15,11 @@ class CreateReceptasTable extends Migration
     {
         Schema::create('receptas', function (Blueprint $table) {
             $table->id();
-            $table->longText('useMedicines');
-            $table->longText('symptoms');
+            $table->longText('Medicines');
+            $table->longText('recommendations');
+            $table->string("patient_pesel");
+            $table->foreignId("id_lekarz")->references('id')->on('lekarzs');
+            $table->foreignId("id_wizyta")->references('id')->on('wizytas');
         });
     }
 
