@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\WyborlekarzaController;
+use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\dashboard;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,5 @@ Route::get('/wybor-lekarza', [WyborlekarzaController::class, 'index'])->name('la
 Route::get('/wybor-lekarza/{id}', [WyborlekarzaController::class, 'kalendarz'])->name('layouts.kalendarzlekarza');
 
 Route::get('/home', [dashboard::class, 'index'])->name('dashboard');
+
+Route::get('user', [App\Http\Controllers\ProfilController::class, 'show']);
