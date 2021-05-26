@@ -71,8 +71,8 @@
                                 <input type="text" name="leki">
                             </div>
                             <div class="txt-field">
-                                <label for="alergie">Alergie</label>
-                                <input type="text" name="alergie">
+                                <label for="objawy">Objawy</label>
+                                <input type="text" name="objawy">
                             </div>
                             <button type="submit">Zapisz się</button>
                         </form>
