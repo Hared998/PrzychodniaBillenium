@@ -2877,9 +2877,11 @@ fieldset:disabled a.btn {
 }
 
 .btn-link {
-  font-weight: 400;
+  font-weight: 300;
   color: #3490dc;
   text-decoration: none;
+  margin-left: 120px;
+  margin-top: 20px;
 }
 .btn-link:hover {
   color: #1d68a7;
