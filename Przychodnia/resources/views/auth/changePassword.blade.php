@@ -77,7 +77,7 @@
 
                              <div class="button-section">
 
-                                <div class="right">
+                                <div class="rightprzypomnij">
 
                                     <button type="submit">{{ __('Zmień hasło') }}</button>
 
