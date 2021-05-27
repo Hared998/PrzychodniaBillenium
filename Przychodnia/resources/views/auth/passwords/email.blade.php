@@ -17,10 +17,7 @@
                             <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                             </div>
-                        @else
-                            <div class="alert alert-success" role="alert">
-                            Wypełnij formularz a resztą zajmiemy się sami
-                            </div>
+                            
                            
                     @endif
 

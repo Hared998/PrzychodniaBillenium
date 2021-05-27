@@ -15,7 +15,7 @@ return [
 
     'reset' => 'Your password has been reset!',
     'sent' => 'E-mail został wysłany na podany adres',
-    'throttled' => 'Please wait before retrying.',
+    'throttled' => 'Spróbuj ponownie później',
     'token' => 'This password reset token is invalid.',
     'user' => "Sprawdź poprawność adresu e-mail lub spróbuj ponownie później",
 
