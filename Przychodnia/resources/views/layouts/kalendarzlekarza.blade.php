@@ -50,6 +50,7 @@
 				        </table>
 				        <div class="frame">
 				          <table class="dates-table w-100">
+                              
 			              <tbody class="tbody">
 			              </tbody>
 				          </table>
@@ -59,13 +60,11 @@
 				    </div>
 				    <div class="event-container">
                         <form id="wizyta" action="#">
+                            <input id="data-kalendarz" type="text" name="data" style="display: none;">
                             <label for="dostepne-godziny">Wybierz godzinę: </label><br>
                             <select id="dostepne-godziny" name="godziny" form="wizyta">
-                                <option value="9:00">9:00</option>
-                                <option value="9:40">9:40</option>
-                                <option value="10:20">10:20</option>
-                                <option value="11">11:00</option>
-                            </select>
+                          
+                            </select> 
                             <div class="txt-field">
                                 <label for="leki">Stosowane leki</label>
                                 <input type="text" name="leki">
@@ -131,11 +130,31 @@
             else if(miesiac === "Gru") {
                 miesiac = '12';
             }
-
             var data = rok+"-"+miesiac+"-"+dzien;
-
+            var data2 = {!! json_encode($wizyty->toArray()) !!};
+            
+            var select = document.getElementById('dostepne-godziny');
+            var length = select.options.length;
+            for (i = length-1; i >= 0; i--) {
+                select.options[i] = null;
+                }
+            for(var i =0; i < data2.length; i++)  
+            {
+                var dataset = data2[i]['Date'].split(' ')
+                if(data == dataset[0])
+                {
+                    var select = document.getElementById('dostepne-godziny');
+                    var option = document.createElement('option');
+                    option.textContent = dataset[1];
+                    select.appendChild(option);
+                    
+                }
+                 
+            }
+            
             $("#data-kalendarz").val(data);
         });
     });
 </script>
+
 @endsection

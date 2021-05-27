@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Lekarz;
 use GuzzleHttp\Psr7\Request;
-
+use App\Models\Wizyta;
 class WyborlekarzaController extends Controller
 {
     public function index()
@@ -16,7 +16,10 @@ class WyborlekarzaController extends Controller
     public function kalendarz($id)
     {
         $lekarz = Lekarz::find($id);
-
-        return view('layouts.kalendarzlekarza', ['lekarz' => $lekarz]);
+        $wizyty = Wizyta::where('id_lekarz', $lekarz->id)->where('isBooked',0)->get();
+        $data = now();
+        
+        return view('layouts.kalendarzlekarza', ['lekarz' => $lekarz,'wizyty' => $wizyty,'data' => $data]);
+        
     }
 }
