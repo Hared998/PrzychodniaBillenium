@@ -48,6 +48,10 @@
                                     <button type="submit">{{ __('Zaloguj się') }}</button>
                                 </div>
                             </div>
+
+                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Zapomniałeś hasła?') }}
+                            </a>
                 </form>
             
         </div>

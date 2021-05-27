@@ -27,3 +27,6 @@ Route::get('/wybor-lekarza', [WyborlekarzaController::class, 'index'])->name('la
 Route::get('/wybor-lekarza/{id}', [WyborlekarzaController::class, 'kalendarz'])->name('layouts.kalendarzlekarza');
 
 Route::get('/home', [dashboard::class, 'index'])->name('dashboard');
+
+Route::get('change-password', 'App\Http\Controllers\ChangePasswordController@index');
+Route::post('change-password', 'App\Http\Controllers\ChangePasswordController@store')->name('change.password');
