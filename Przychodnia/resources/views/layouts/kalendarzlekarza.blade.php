@@ -58,6 +58,7 @@
 				      </div>
 				    </div>
 				    <div class="event-container">
+                        <h3 class="event-alert d-none">Wybierz inny dzień</h3>
                         <form id="wizyta" action="#">
                             <label for="dostepne-godziny">Wybierz godzinę: </label><br>
                             <select id="dostepne-godziny" name="godziny" form="wizyta">
@@ -88,6 +89,52 @@
 <script src="{{ asset('js/main.js') }}"></script>
 <script>
     $(document).ready(function() {
+        $('.month.active-month').addClass('current-month');
+        $('.table-date').each(function () {
+            var wartosc = $(this).text();
+            var d = new Date();
+            var day = d.getDate();
+
+            if(wartosc < day) {
+                $(this).addClass("day-inactive");
+            }
+            else {
+                $(this).addClass("day-active");
+            }
+        });
+        $(document).on('click', '.day-inactive', function() {
+            $('#wizyta').addClass('d-none');
+            $('.event-alert').removeClass('d-none');
+        });
+        $(document).on('click', '.day-active', function() {
+            $('#wizyta').removeClass('d-none');
+            $('.event-alert').addClass('d-none');
+        });
+        $(document).on('click', '.month', function() {
+            var d = new Date();
+            var month = d.getMonth() + 1;
+
+            var index = $(this).index() + 1;
+            if(month > index)
+            {
+                $(this).removeClass("active-month");
+            }
+            var currentMonth = $(this).hasClass('current-month');
+            if(currentMonth) {
+                $('.table-date').each(function () {
+                    var wartosc = $(this).text();
+                    var d = new Date();
+                    var day = d.getDate();
+
+                    if(wartosc < day) {
+                        $(this).addClass("day-inactive");
+                    }
+                    else {
+                        $(this).addClass("day-active");
+                    }
+                });
+            }
+        });
         $(document).on('click', '.table-date', function(){
             var dzien = $(this).text();
             var miesiac = $('.month.active-month').text();

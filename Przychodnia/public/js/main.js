@@ -86,7 +86,14 @@ function month_click(event) {
     $(this).addClass("active-month");
     var new_month = $(".month").index(this);
     date.setMonth(new_month);
-    init_calendar(date);
+    var d = new Date();
+    var month = d.getMonth() + 1;
+
+    var index = $(this).index() + 1;
+    if(month <= index)
+    {
+        init_calendar(date);
+    }
 }
 
 // Event handler for when the year right-button is clicked
