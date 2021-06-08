@@ -31,7 +31,7 @@
     <div id="app">
         <nav class="navbar navbar-expand navbar-dark" style="background: #FC9219">
 
-    <a class="navbar-brand" href="/">Przychodnia</a>
+    <a class="navbar-brand" href="/home">Przychodnia</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02"
             aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
 
-                <a class="nav-link" href="/">Strona główna <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/home">Strona główna <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('layouts.wyborlekarza') }}">Wybór lekarza</a>
@@ -74,6 +74,13 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    <div class="dropdown-content-body">
+                                        <a class="dropdown-item" href="{{ route('change.password') }}" onclick="event.preventDefault(); document.getElementById('form').submit();">
+                                            <i class="icon"></i><span>{{ __('Zmień hasło') }}</span>
+                                        </a>
+                                        <form id="form" action="{{ route('change.password') }}" method="GET" class="d-none">
+                                        </form>
+                                    </div>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
