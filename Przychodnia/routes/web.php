@@ -28,5 +28,9 @@ Route::get('/wybor-lekarza/{id}', [WyborlekarzaController::class, 'kalendarz'])-
 
 Route::get('/home', [dashboard::class, 'index'])->name('dashboard');
 
+Route::get('/recepta', function () {
+    return view('recepta');
+});
+
 Route::get('change-password', 'App\Http\Controllers\ChangePasswordController@index');
 Route::post('change-password', 'App\Http\Controllers\ChangePasswordController@store')->name('change.password');
