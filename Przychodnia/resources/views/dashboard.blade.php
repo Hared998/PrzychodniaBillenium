@@ -56,22 +56,21 @@
                             </div>
                            
                             <div class="col-sm-6 text-secondary">
-                                @if($datavisit != null)
+                                @if(isset($datavisit))
                                     {{$datavisit->Date}}
                                 @else
-                                
                                     Brak zaplanowanych wizyt
-                                    @endif
+                                 @endif
                             </div>
                         </div>
                         <hr>
-                        @if($datavisit != null)
+                        @if(isset($doctor))
                         <div class="row">
                             <div class="col-sm-4">
                                 Lekarz: 
                             </div>
                             <div class="col-sm-4">
-                            {{$doctor[0]->firstName}} {{$doctor[0]->lastName}}
+                            {{$doctor->firstName}} {{$doctor->lastName}}
                             </div>
                         </div>
                         <br>
@@ -81,7 +80,7 @@
                             </div>
                             
                             <div class="col-sm-4">
-                                {{$doctor[0]->Specialization}} 
+                                {{$doctor->Specialization}} 
                             </div>
                         </div>
                         @endif
@@ -95,7 +94,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Ostatnie recepty</h4>
                         <div class="list-group">
-                            @if(count($datarecipe) > 0)
+                            @if(isset($datarecipe))
                             @foreach($datarecipe as $i)
                             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
