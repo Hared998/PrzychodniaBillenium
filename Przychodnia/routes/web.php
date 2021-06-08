@@ -25,7 +25,7 @@ Auth::routes();
 Route::get('/wybor-lekarza', [WyborlekarzaController::class, 'index'])->name('layouts.wyborlekarza');
 
 Route::get('/wybor-lekarza/{id}', [WyborlekarzaController::class, 'kalendarz'])->name('layouts.kalendarzlekarza');
-
+Route::post('/wybor-lekarza/rezerwacja', [WyborlekarzaController::class, 'rezerwacja'])->name('layouts.rezerwacjawizyty');
 Route::get('/home', [dashboard::class, 'index'])->name('dashboard');
 
 Route::get('/recepta', function () {
