@@ -33,10 +33,11 @@ Route::get('/uncancel/{id}', [wizyty::class, 'uncancel'])->name('wizyta.uncancel
 
 Route::get('/wybor-lekarza/{id}', [WyborlekarzaController::class, 'kalendarz'])->name('layouts.kalendarzlekarza');
 Route::post('/wybor-lekarza/rezerwacja', [WyborlekarzaController::class, 'rezerwacja'])->name('layouts.rezerwacjawizyty');
+Route::post('/tworzenie-wizyt/dodaj', [wizyty::class, 'Generowaniewizyt'])->name('wizyty.generowaniewizyt');
 Route::get('/home', [dashboard::class, 'index'])->name('dashboard');
 Route::get('/wizyty', [wizyty::class, 'lista'])->name('wizyty');
 Route::get('/recepcja/wizyty', [wizyty::class, 'recepcja'])->name('wizyty.recepcja');
-Route::get('/tworzenie-wizyt', function () {return view('tworzenieWizyt');});
+Route::get('/tworzenie-wizyt', [wizyty::class, 'doctors'])->name('wizyty.tworzenie');
 Route::get('/recepta', function () {
     return view('recepta');
 });

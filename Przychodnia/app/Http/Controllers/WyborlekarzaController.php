@@ -46,6 +46,6 @@ class WyborlekarzaController extends Controller
                'patientPESEL' => $request->get('id_pesel'),
                'isBooked' => "1"
             ]);
-        return redirect('/home');
+        return $objawy;
     }
 }
