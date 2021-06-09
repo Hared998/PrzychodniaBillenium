@@ -345,7 +345,7 @@
                         <div class="row mt-5">
                           <span class="text-lg-center">Dane o lekarzu: </span>
                           <br />
-                          Imie i Nazwisko: {{ $lekarz->firstName }} <br />
+                          Imie i Nazwisko: {{ $monday920}} <br />
                           Specjalizacja: Jakaśtam
                         </div>
                       </div>
