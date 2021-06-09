@@ -100,6 +100,6 @@ class wizyty extends Controller
             $newdate = date("Y-m-d",strtotime('+1 day', strtotime($newdate)));
             $newtime = $request->pracuje_od;
         }
-        return date('D', strtotime($newdate));
+        return redirect('/dashoboard');
     }
 }
