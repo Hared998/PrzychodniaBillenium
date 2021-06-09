@@ -15,8 +15,9 @@ class ReceptaController extends Controller
         $recepta=Recepta::find($id);    
         $lekarz=Lekarz::find($recepta->id_lekarz);
         $wizyta=Wizyta::find($recepta->id_wizyta);
+        $date = date('d-m-Y H:i', strtotime($wizyta->Date));
         if($recepta!=null){
-            return view('recepta',['recepta'=>$recepta,'lekarz'=>$lekarz,'wizyta'=>$wizyta]);
+            return view('recepta',['recepta'=>$recepta,'lekarz'=>$lekarz,'wizyta'=>$wizyta,'date'=>$date]);
         }
         return redirect('/home');
     }

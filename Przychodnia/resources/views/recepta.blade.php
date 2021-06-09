@@ -10,7 +10,7 @@
         </div>
         <div class="recepta-content col-9 d-flex justify-content-center">
             <div class="recepta-board">
-                <h4 class="recepta-data text-right">Data wystawienia: {{$wizyta->Date}}</h4>
+                <h4 class="recepta-data text-right">Data wystawienia: {{$date}}</h4>
                 <div class="row d-flex justify-content-end">
                     <h2 class="recepta-imie-nazwisko">{{$wizyta->patientFirstName}}</h2>
                     <h2 class="recepta-imie-nazwisko">{{$wizyta->patientLastName}}</h2>
