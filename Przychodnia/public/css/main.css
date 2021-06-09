@@ -349,7 +349,7 @@
     border-right: 2px solid #cacaca;
 }
 .recepta-content .recepta-content .recepta-board {
-    width: 700px;
+    width: 600px;
     height: auto;
     background-color: white;
     padding: 30px;
@@ -358,7 +358,7 @@
 }
 .recepta-content .recepta-content .recepta-board .recepta-data{
     color: #b3b3b3;
-    font-size: 20px;
+    font-size: 18px;
 }
 .recepta-content .recepta-content .recepta-board .recepta-imie-nazwisko{
     margin-right: 15px;
@@ -370,6 +370,70 @@
     border: 1px solid #cacaca;
     padding: 10px;
 }
+#tworzenie-wizyt__form {
+
+}
+#tworzenie-wizyt__form label{
+    font-size: 18px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#tworzenie-wizyt__form select{
+    border: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance:none;
+    border-bottom: 2px solid black;
+    font-size: 19px;
+}
+#tworzenie-wizyt__form input{
+    font-size: 19px;
+    border: none;
+    border-bottom: 2px solid black;
+}
+#tworzenie-wizyt__form button {
+    position: relative;
+    font-size: 20px;
+    padding: 15px 20px;
+    margin-top: 80px;
+    background: none;
+    color: #FC9219;
+    background: none;
+    transition: 0.5s;
+    border: none;
+    margin-left: 75%;
+  }
+  #tworzenie-wizyt__form button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid #FC9219;
+    border-left: 3px solid #FC9219;
+    transition: 0.5s;
+  }
+  #tworzenie-wizyt__form button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    border-right: 3px solid #FC9219;
+    border-bottom: 3px solid #FC9219;
+    transition: 0.5s;
+  }
+  #tworzenie-wizyt__form button:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+  #tworzenie-wizyt__form button:hover::after {
+    width: 100%;
+    height: 100%;
+  }
 
 
 
