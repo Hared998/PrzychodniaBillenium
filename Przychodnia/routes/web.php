@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\WyborlekarzaController;
+use App\Http\Controllers\ReceptaController;
 use App\Http\Controllers\dashboard;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,7 @@ Route::get('/home', [dashboard::class, 'index'])->name('dashboard');
 Route::get('/recepta', function () {
     return view('recepta');
 });
+Route::get('recepta/{id}', [ReceptaController::class, 'show'])->name('recepta');
 
 Route::get('change-password', 'App\Http\Controllers\ChangePasswordController@index');
 Route::post('change-password', 'App\Http\Controllers\ChangePasswordController@store')->name('change.password');
