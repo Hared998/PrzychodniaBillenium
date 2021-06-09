@@ -24,6 +24,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('showDoctor', [App\Http\Controllers\PanelRecepcji::class, 'showDoctor']);
+Route::get('showUser', [App\Http\Controllers\ListPactients::class, 'showUser']);
 Route::get('showWizytas/{id}', [App\Http\Controllers\PanelRecepcji::class, 'showWizytas']);
 
 Route::get('/wybor-lekarza', [WyborlekarzaController::class, 'index'])->name('layouts.wyborlekarza');
