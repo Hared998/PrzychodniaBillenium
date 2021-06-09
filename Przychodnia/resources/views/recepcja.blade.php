@@ -6,13 +6,14 @@
             <div class="row">
               <div class="col-lg-3 ml-auto">
                 <div class="card">
-                    <button
+                <button
                       class="btn-fullSize btn-fullSize btn-lg btn-primary"
                       style="
                         background-color: rgb(199, 115, 20) !important;
                         border-style: none;
                         border-color: #ec1f1f !important;
                       "
+                      onclick="window.location.pathname = '/showUser'"
                     >
                       Lista pacjentów
                     </button>
@@ -55,32 +56,27 @@
                     <h4 class="card-title text-center">Kalendarz wizyt</h4>
                     <div class="row">
                       <div class="col-lg-9">
-                        <table>
+                      <table id="patients">
                           <thead>
                             <tr>
                               <th></th>
                               <th>
-                                <span class="day">1</span>
                                 <span class="long">Poniedziałek</span>
                                 <span class="short">Mon</span>
                               </th>
                               <th>
-                                <span class="day">2</span>
                                 <span class="long">Wtorek</span>
                                 <span class="short">Tue</span>
                               </th>
                               <th>
-                                <span class="day">3</span>
                                 <span class="long">Środa</span>
                                 <span class="short">We</span>
                               </th>
                               <th>
-                                <span class="day">4</span>
                                 <span class="long">Czwartek</span>
                                 <span class="short">Thur</span>
                               </th>
                               <th>
-                                <span class="day">5</span>
                                 <span class="long">Piątek</span>
                                 <span class="short">Fri</span>
                               </th>
@@ -91,20 +87,20 @@
                               <td class="hour" rowspan="4">
                                 <span>8:00</span>
                               </td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td>{{ $monday800->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday800->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday800->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday800->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday800->patientFirstName ?? '' ?? '' }}</td>
                             </tr>
                             <tr></tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td>{{ $monday800->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday800->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday800->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday800->patientLastName ?? '' }}</td>
+                              <td>{{ $friday800->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -113,18 +109,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday840->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday840->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday840->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday840->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday840->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday840->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday840->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday840->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday840->patientLastName ?? '' }}</td>
+                              <td>{{ $friday840->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -133,18 +129,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday920->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday920->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday920->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday920->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday920->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday920->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday920->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday920->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday920->patientLastName ?? '' }}</td>
+                              <td>{{ $friday920->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -153,18 +149,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1000->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday1000->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday1000->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday1000->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday1000->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1000->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday1000->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday1000->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday1000->patientLastName ?? '' }}</td>
+                              <td>{{ $friday1000->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -173,18 +169,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1040->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday1040->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday1040->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday1040->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday1040->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1040->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday1040->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday1040->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday1040->patientLastName ?? '' }}</td>
+                              <td>{{ $friday1040->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -193,18 +189,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1120->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday1120->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday1120->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday1120->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday1120->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1120->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday1120->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday1120->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday1120->patientLastName ?? '' }}</td>
+                              <td>{{ $friday1120->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -213,18 +209,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1200->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday1200->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday1200->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday1200->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday1200->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1200->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday1200->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday1200->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday1200->patientLastName ?? '' }}</td>
+                              <td>{{ $friday1200->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -233,18 +229,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1240->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday1240->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday1240->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday1240->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday1240->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1240->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday1240->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday1240->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday1240->patientLastName ?? '' }}</td>
+                              <td>{{ $friday1240->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -253,18 +249,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1320->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday1320->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday1320->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday1320->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday1320->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1320->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday1320->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday1320->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday1320->patientLastName ?? '' }}</td>
+                              <td>{{ $friday1320->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -273,18 +269,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1400->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday1400->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday1400->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday1400->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday1400->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1400->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday1400->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday1400->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday1400->patientLastName ?? '' }}</td>
+                              <td>{{ $friday1400->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -293,18 +289,18 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1440->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday1440->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday1440->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday1440->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday1440->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1440->patientLastName ?? '' }}</td>
+                              <td>{{ $tuesday1440->patientLastName ?? '' }}</td>
+                              <td>{{ $wednesday1440->patientLastName ?? '' }}</td>
+                              <td>{{ $thursday1440->patientLastName ?? '' }}</td>
+                              <td>{{ $friday1440->patientLastName ?? '' }}</td>
                             </tr>
                             <tr>
                               <td class="hour" rowspan="4">
@@ -313,14 +309,14 @@
                             </tr>
                             <tr></tr>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            <td>{{ $monday1520->patientFirstName ?? '' }}</td>
+                              <td>{{ $tuesday1520->patientFirstName ?? '' }} </td>
+                              <td>{{ $wednesday1520->patientFirstName ?? '' }}</td>
+                              <td>{{ $thursday1520->patientFirstName ?? '' }}</td>
+                              <td>{{ $friday1520->patientFirstName ?? '' }}</td>
                             </tr>
                             <tr>
-                              <td></td>
+                            <td></td>
                               <td></td>
                               <td></td>
                               <td></td>
@@ -345,8 +341,8 @@
                         <div class="row mt-5">
                           <span class="text-lg-center">Dane o lekarzu: </span>
                           <br />
-                          Imie i Nazwisko: Jan Kowalski<br />
-                          Specjalizacja: Jakaśtam
+                          Imie i Nazwisko: --- <br />
+                          Specjalizacja: ---
                         </div>
                       </div>
                     </div>

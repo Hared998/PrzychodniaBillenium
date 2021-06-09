@@ -2,7 +2,6 @@
 
 
 @section('content')
-    </div>
 	<div class="content-body">
           <div class="container-fluid">
             <div class="row">
@@ -16,6 +15,7 @@
                         border-style: none;
                         border-color: #ec1f1f !important;
                         "
+                        onclick="window.location.pathname = '/showDoctor'"
                       >
                         Wróć
                       </button>

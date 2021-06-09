@@ -13,6 +13,7 @@
                         border-style: none;
                         border-color: #ec1f1f !important;
                       "
+                      onclick="window.location.pathname = '/showUser'"
                     >
                       Lista pacjentów
                     </button>
@@ -60,27 +61,22 @@
                             <tr>
                               <th></th>
                               <th>
-                                <span class="day">1</span>
                                 <span class="long">Poniedziałek</span>
                                 <span class="short">Mon</span>
                               </th>
                               <th>
-                                <span class="day">2</span>
                                 <span class="long">Wtorek</span>
                                 <span class="short">Tue</span>
                               </th>
                               <th>
-                                <span class="day">3</span>
                                 <span class="long">Środa</span>
                                 <span class="short">We</span>
                               </th>
                               <th>
-                                <span class="day">4</span>
                                 <span class="long">Czwartek</span>
                                 <span class="short">Thur</span>
                               </th>
                               <th>
-                                <span class="day">5</span>
                                 <span class="long">Piątek</span>
                                 <span class="short">Fri</span>
                               </th>
