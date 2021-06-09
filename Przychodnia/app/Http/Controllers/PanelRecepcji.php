@@ -23,7 +23,8 @@ class PanelRecepcji extends Controller
         $visit = Wizyta::whereBetween('Date', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->where('id_lekarz', $lekarz->id)->get();
         $data = DB::table('lekarzs')->select('id', 'firstNAME', 'lastNAME', 'Specialization')->get();
 
-        return view('wizytas',compact('visit', 'data'));
+
+        return view('wizytas',compact('visit', 'data', 'lekarz'));
     }
 
 }
