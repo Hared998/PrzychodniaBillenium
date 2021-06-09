@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\WyborlekarzaController;
-use App\Http\Controllers\dashboard;
 use App\Http\Controllers\wizyty;
+use App\Http\Controllers\dashboard;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WyborlekarzaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,9 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Auth::routes();
+Auth::routes(['verify'=> true]);
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/acceptregister', 'App\Http\Controllers\HomeController@index2')->name('acceptregister');
 
 
 Route::get('/wybor-lekarza', [WyborlekarzaController::class, 'index'])->name('layouts.wyborlekarza');
