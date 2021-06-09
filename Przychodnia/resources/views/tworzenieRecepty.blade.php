@@ -18,10 +18,6 @@
                         <label for="zalecenia">Zalecenia</label>
                         <input type="text" id="zalecenia" name="zalecenia">
                     </div>
-                    <input type="text" id="imie-nazwisko-pacjenta" value="" class="d-none">
-                    <input type="text" id="data-wystawienia-recepty" value="" class="d-none">
-                    <input type="text" id="wystawiajacy-lekarz" value="" class="d-none">
-
                     <button type="submit" class="tworzenie-wizyt__button">Utwórz</button>
                 </form>
             </div>
