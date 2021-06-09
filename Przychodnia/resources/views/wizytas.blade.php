@@ -55,7 +55,7 @@
                     <h4 class="card-title text-center">Kalendarz wizyt</h4>
                     <div class="row">
                       <div class="col-lg-9">
-                        <table>
+                        <table id="patients">
                           <thead>
                             <tr>
                               <th></th>
