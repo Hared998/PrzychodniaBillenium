@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\WyborlekarzaController;
-use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\dashboard;
 use App\Http\Controllers\wizyty;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +45,3 @@ Route::get('/recepta', function () {
 Route::get('change-password', 'App\Http\Controllers\ChangePasswordController@index');
 Route::post('change-password', 'App\Http\Controllers\ChangePasswordController@store')->name('change.password');
 
-Route::get('user', [App\Http\Controllers\ProfilController::class, 'show']);
