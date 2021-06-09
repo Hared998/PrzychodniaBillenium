@@ -49,12 +49,6 @@ class PanelRecepcji extends Controller
 		$end->minute = 20;
 		$monday1000 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
 
-		$start->hour = 9;
-		$start->minute = 40;
-		$end->hour = 10;
-		$end->minute = 20;
-		$monday1000 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
-
 		$start->hour = 10;
 		$start->minute = 30;
 		$end->hour = 10;
@@ -131,11 +125,6 @@ class PanelRecepcji extends Controller
 		$end->minute = 20;
 		$tuesday1000 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
 
-		$start->hour = 9;
-		$start->minute = 40;
-		$end->hour = 10;
-		$end->minute = 20;
-		$tuesday1000 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
 
 		$start->hour = 10;
 		$start->minute = 30;
@@ -207,12 +196,6 @@ class PanelRecepcji extends Controller
 		$end->hour = 9;
 		$end->minute = 30;
 		$wednesday920 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
-
-		$start->hour = 9;
-		$start->minute = 40;
-		$end->hour = 10;
-		$end->minute = 20;
-		$wednesday1000 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
 
 		$start->hour = 9;
 		$start->minute = 40;
@@ -296,11 +279,6 @@ class PanelRecepcji extends Controller
 		$end->minute = 20;
 		$thursday1000 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
 
-		$start->hour = 9;
-		$start->minute = 40;
-		$end->hour = 10;
-		$end->minute = 20;
-		$thursday1000 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
 
 		$start->hour = 10;
 		$start->minute = 30;
@@ -379,11 +357,6 @@ class PanelRecepcji extends Controller
 		$end->minute = 20;
 		$friday1000 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
 
-		$start->hour = 9;
-		$start->minute = 40;
-		$end->hour = 10;
-		$end->minute = 20;
-		$friday1000 = Wizyta::whereBetween('Date', array($start, $end))->where('id_lekarz', $lekarz->id)->get();
 
 		$start->hour = 10;
 		$start->minute = 30;
