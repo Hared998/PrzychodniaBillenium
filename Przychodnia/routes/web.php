@@ -1,11 +1,15 @@
 <?php
 
+
+
 use App\Http\Controllers\WyborlekarzaController;
 use App\Http\Controllers\ReceptaController;
 use App\Http\Controllers\dashboard;
+
 use App\Http\Controllers\wizyty;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +26,9 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Auth::routes();
+Auth::routes(['verify'=> true]);
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/acceptregister', 'App\Http\Controllers\HomeController@index2')->name('acceptregister');
 
 Route::get('showDoctor', [App\Http\Controllers\PanelRecepcji::class, 'showDoctor']);
 Route::get('showUser', [App\Http\Controllers\ListPactients::class, 'showUser']);
