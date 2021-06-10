@@ -26,8 +26,9 @@
                       style="
                         background-color: rgb(199, 115, 20) !important;
                         border-style: none;
-                        border-color: #ec1f1f !important;
-                      "
+                        border-color: #ec1f1f !important;"
+						onclick="window.location.pathname = '/tworzenie-wizyt'"
+                      
                     >
                       Tworzenie wizyt
                     </button>
@@ -41,8 +42,9 @@
                       style="
                         background-color: rgb(199, 115, 20) !important;
                         border-style: none;
-                        border-color: #ec1f1f !important;
-                      "
+                        border-color: #ec1f1f !important;"
+						onclick="window.location.pathname = '/recepcja/wizyty'"
+                      
                     >
                       Lista wizyt
                   </div>
