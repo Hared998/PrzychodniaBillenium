@@ -21,4 +21,23 @@ class ReceptaController extends Controller
         }
         return redirect('/home');
     }
+    public function wizytasforecepta($id)
+    {
+        
+        $data=Wizyta::find($id);
+        
+        return view('tworzenieRecepty', ['data' => $data]);
+
+    }
+    public function addrecepta(Request $request)
+    {
+        DB::table('receptas')->insert([
+            'Medicines' => $request->przepisane_leki,
+            'recommendations' => $request->zalecenia,
+            'id_lekarz' => $request->lekarz,
+            'patient_pesel' => $request->pesel,
+            'id_wizyta' => $request->wizyta
+        ]); 
+        return redirect('/home');
+    }
 }

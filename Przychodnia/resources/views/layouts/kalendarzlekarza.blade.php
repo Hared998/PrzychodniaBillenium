@@ -60,8 +60,12 @@
 				    </div>
 				    <div class="event-container">
                         <h3 class="event-alert d-none">Wybierz inny dzień</h3>
-                        <form id="wizyta" action="#">
+                        <form id="wizyta" action="/wybor-lekarza/rezerwacja" method="POST">
+                            @csrf
                             <input id="data-kalendarz" type="text" name="data" style="display: none;">
+                            <input id="id_imie" type="text" value= "{{ Auth::user()->imie }}" name="id_imie" style="display:none;">
+                            <input id="id_nazwisko" type="text" value= "{{ Auth::user()->nazwisko }}" name="id_nazwisko" style="display:none;">
+                            <input id="id_user" type="text" value= "{{ Auth::user()->id }}" name="id_pesel" style="display:none;">
                             <label for="dostepne-godziny">Wybierz godzinę: </label><br>
                             <select id="dostepne-godziny" name="godziny" form="wizyta">
                           
@@ -74,7 +78,6 @@
                                 <label for="objawy">Objawy</label>
                                 <input type="text" name="objawy">
                             </div>
-                            <input id="data-kalendarz" type="text" name="data" style="display: none;">
                             <button type="submit">Zapisz się</button>
                         </form>
 				    </div>
@@ -135,7 +138,14 @@
             }
         });
         $(document).on('click', '.table-date', function(){
+            
+            var day = ["0","1","2","3","4","5","6","7","8","9"];
             var dzien = $(this).text();
+            for(var i = 0; i < day.length; i++)
+            {
+                if($(this).text() == day[i])
+                dzien = "0" + $(this).text();
+            } 
             var miesiac = $('.month.active-month').text();
             var rok = $('.year').text();
             if(miesiac === "Sty") {
@@ -187,14 +197,19 @@
                 }
             for(var i =0; i < data2.length; i++)  
             {
-                var dataset = data2[i]['Date'].split(' ')
+                var id = data2[i]['id'];
+                
+                var dataset = data2[i]['Date'].split(' ');
+                
+                var minuesh = dataset[1].split(':');
+                
                 if(data == dataset[0])
                 {
-                    var select = document.getElementById('dostepne-godziny');
                     var option = document.createElement('option');
-                    option.textContent = dataset[1];
+                    option.textContent = minuesh[0]+":"+minuesh[1];
+                    option.value = id;
+                    console.log(id);
                     select.appendChild(option);
-                    
                 }
                  
             }
