@@ -35,7 +35,7 @@
                         <tbody>
 						@foreach ( $data as $item )
                           <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">{{$item->id}}</th>
                             <td>
                               <div class="row">
                                 <div class="col-sm-4 text-right">
