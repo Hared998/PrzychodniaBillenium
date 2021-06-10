@@ -29,7 +29,6 @@
                             <th scope="col">
                               <div class="text-center">Pacjent</div>
                             </th>
-                            <th scope="col">-</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -52,7 +51,6 @@
                                 </div>
                               </div>
                             </td>
-                            <td><button class="btn btn-info">Info</button></td>
                           </tr>
 						  @endforeach
                         </tbody>
