@@ -18,9 +18,12 @@
                             <th style="width: 131px;">Dzień</th>
                             <th style="width: 131px;">Godzina</th>
                             <th style="width: 131px;">Lekarz</th>
+                            <th style="width: 131px;">Pacjent</th>
                             <th style="width: 131px;">Specjalizacja</th>
                             <th style="width: 75px;">Status</th>
-                            <th class="bg-info"style="width: 75px; "></th>
+                            <th class="bg-info"style="width: 75px; ">Przyciski</th>
+                            <th class="bg-info"style="width: 75px; ">Recepty</th>
+                            
                         </tr>
                     </thead>
                     <tbody id="myTable">
@@ -34,18 +37,25 @@
                             <td><span>{{$date[0]}}</span></td>
                             <td><span class = "label">{{$time[0]}}:{{$time[1]}}</span></td>
                             <td><span class = "label">{{$i->firstName}} {{$i->lastName}}</span></td>
+                            <td><span class = "label">{{$i->patientFirstName}} {{$i->patientLastName}}</span></td>
                             <td><span class = "label">{{$i->Specialization}}</span></td>
                             @if($i->isApproved == 0 && $i->isBooked == 1 )
                             <td><span class = "label">Oczekujące</span></td>
                             <td><a href="/przyjmij/{{$i->id}}" class="btn btn-success">Przyjmij</a></td>
                             @endif
-                            @if($i->isApproved == 1 && $i->isBooked == 1 && $i->canceled == 0 )
+                            @if($i->isApproved == 1 && $i->isBooked == 1 && $i->canceled == 0 && $i->Date > $now)
                             <td><span class = "label">Zatwierdzona</span></td>
-                            <td><a href="/cancel/{{$i->id}}" class="btn btn-danger">Anuluj</a></td>
+                            <td><a href="/cancel/{{$i->id}}" class="btn btn-danger">Anuluj</a>
+                            <a href="/odwolaj/{{$i->id}}" class="btn btn-danger">Odwolaj</a></td>
                             @endif
                             @if($i->canceled == 1 )
                             <td><span class = "label">Anulowane</span></td>
-                            <td><a href="/uncancel/{{$i->id}}" class="btn btn-danger">Odanuluj</a></td>
+                            <td><a href="/uncancel/{{$i->id}}" class="btn btn-danger">Przywróć</a></td>
+                            @endif
+                            @if($i->Date < $now)
+                                <td><span class = "label">Odbyta</span></td>
+                                <td></td>
+                                <td><a href="/tworzenie/{{$i->id}}" class="btn btn-success">Dodaj</a></td>
                             @endif
                             
                                 

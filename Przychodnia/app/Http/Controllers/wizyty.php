@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Wizyta;
 use Illuminate\Http\Request;
 use Auth;
+use Carbon\Carbon;
 use App\Models\Lekarz;
 use DB;
 class wizyty extends Controller
@@ -14,6 +15,7 @@ class wizyty extends Controller
         $user = Auth::user();
         $data = DB::table('lekarzs')
         ->join('wizytas', 'lekarzs.id', '=', 'wizytas.id_lekarz')->where('isBooked', '=', 1)->where('patientPESEL', '=', $user->id)->get();
+        
         return view('listawizyt', ['data' => $data]);
     }
     public function cancel($id)
@@ -29,7 +31,7 @@ class wizyty extends Controller
                 'isBooked' => "0"
             ]); 
 
-        return redirect('/wizyty');
+        return redirect('/recepcja/wizyty');
     } 
     public function unaccept($id)
     {
@@ -66,7 +68,9 @@ class wizyty extends Controller
         $user = Auth::user();
         $data = DB::table('lekarzs')
         ->join('wizytas', 'lekarzs.id', '=', 'wizytas.id_lekarz')->where('isBooked', '=', 1)->get();
-        return view('listawizytrecepcja', ['data' => $data]);
+        $now = DB::select('SELECT NOW() AS mp');
+        $today = Carbon::now();
+        return view('listawizytrecepcja', ['data' => $data, 'now' => $today]);
     }
     public function doctors()
     {
@@ -100,6 +104,6 @@ class wizyty extends Controller
             $newdate = date("Y-m-d",strtotime('+1 day', strtotime($newdate)));
             $newtime = $request->pracuje_od;
         }
-        return redirect('/dashoboard');
+        return redirect('/home');
     }
 }
