@@ -6,6 +6,7 @@ use App\Http\Controllers\TworzenieController;
 use App\Http\Controllers\dashboard;
 use App\Http\Controllers\wizyty;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('showDoctor', [App\Http\Controllers\PanelRecepcji::class, 'showDoctor']);
+Route::get('showUser', [App\Http\Controllers\ListPactients::class, 'showUser']);
+Route::get('showWizytas/{id}', [App\Http\Controllers\PanelRecepcji::class, 'showWizytas']);
 
 Route::get('/wybor-lekarza', [WyborlekarzaController::class, 'index'])->name('layouts.wyborlekarza');
 Route::get('/odwolaj/{id}', [wizyty::class, 'cancel'])->name('wizyta.cancel');
@@ -51,3 +55,4 @@ Route::get('tworzenie/{id}', [TworzenieController::class, 'create'])->name('twor
 
 Route::get('change-password', 'App\Http\Controllers\ChangePasswordController@index');
 Route::post('change-password', 'App\Http\Controllers\ChangePasswordController@store')->name('change.password');
+
